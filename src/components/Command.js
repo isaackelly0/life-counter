@@ -1,6 +1,6 @@
 import {useState} from "react";
-const Counter = () => {
-    const [count, setCount] = useState(40);
+const Command = () => {
+    const [count, setCount] = useState(0);
     return (
         <div>
             <button onClick={()=>{setCount(count - 1)}}>-</button>
@@ -9,4 +9,4 @@ const Counter = () => {
         </div>
     )
 }
-export default Counter
+export default Command;
