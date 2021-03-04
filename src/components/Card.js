@@ -1,5 +1,6 @@
 import Counter from "./Counter";
 import Command from "./Command";
+import uniqid from "uniqid";
 const Card = (props) => {
     return(
         <div>
@@ -7,7 +8,7 @@ const Card = (props) => {
             <Counter/>
             <h5>Commander Damage from:</h5>
             <ul>
-                {props.enemies.map((enemy, index)=>{return(<li key={index}><h4>{enemy}</h4><Command/></li>)})}
+                {props.enemies.map((enemy)=>{return(<li key={uniqid()}><h4>{enemy}</h4><Command/></li>)})}
             </ul>
         </div>
     )

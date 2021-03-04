@@ -1,4 +1,5 @@
 import Card from "./Card";
+import uniqid from "uniqid";
 const Board = (props) => {
     const boardSet = (arr) => {
         let newArr = []
@@ -12,7 +13,7 @@ const Board = (props) => {
     }
     return (
         <div>
-            {boardSet(props.players)}
+            {boardSet(props.players.map(player=>{return<div key={uniqid()}>{player}</div>}))}
         </div>
     )
 }
