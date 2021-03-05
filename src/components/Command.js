@@ -3,9 +3,9 @@ const Command = () => {
     const [count, setCount] = useState(0);
     return (
         <div>
-            <button onClick={()=>{setCount(count - 1)}}>-</button>
+            <button className="btn btn-warning"onClick={()=>{setCount(count - 1)}}>-</button>
             <span>{count}</span>
-            <button onClick={()=>{setCount(count + 1)}}>+</button>
+            <button className="btn btn-warning" onClick={()=>{setCount(count + 1)}}>+</button>
         </div>
     )
 }

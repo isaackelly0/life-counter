@@ -3,7 +3,7 @@ import Command from "./Command";
 import uniqid from "uniqid";
 const Card = (props) => {
     return(
-        <div>
+        <div className="col-md-6 col-lg-4">
             <h4>{props.name}</h4>
             <Counter/>
             <h5>Commander Damage from:</h5>

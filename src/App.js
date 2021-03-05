@@ -30,7 +30,7 @@ const App = () => {
     
   )
   return (
-    <div id="App">   
+    <div id="App" className="container">   
     </div>
   );
 }

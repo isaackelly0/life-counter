@@ -11,7 +11,7 @@ const Board = (props) => {
         return newArr;
     }
     return (
-        <div>
+        <div className="row">
             {boardSet(props.players.map(player=>{return<div key={uniqid()}>{player}</div>}))}
         </div>
     )
