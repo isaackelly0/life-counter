@@ -16,6 +16,7 @@ const Prompt = (props) => {
                 <input type="text" onChange={e=>setText(e.target.value)} value={text}></input>
                 <button type="submit">click</button>
             </form>
+            <button onClick={()=>{props.finish(false)}}>Finish</button>
         </div>
     )
 }

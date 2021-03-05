@@ -2,21 +2,35 @@ import './App.css';
 import {useState, useEffect} from "react";
 import Board from "./components/Board"
 import Prompt from "./components/Prompt";
+import ReactDOM from "react-dom";
 const App = () => {
-  const [players, setPLayers] = useState([]);
+  const [players, setPlayers] = useState([]);
   const [survey, setSurvey] = useState(true);
-  useEffect(()=>{},[])
   const update = (name) => {
     if(players.includes(name)){
       alert("Try to use a different name!")
     }
     else{
-      setPLayers(oldArray => [...oldArray, name])
+      setPlayers(oldArray => [...oldArray, name])
     }
   }
+  useEffect(()=>{
+    if(survey){
+      ReactDOM.render(
+        <Prompt list={players} finish={setSurvey} fn={update}/>,
+        document.getElementById('App'))}
+      else{
+        ReactDOM.unmountComponentAtNode(document.getElementById('App'))
+        ReactDOM.render(
+          <Board players={players}/>,
+          document.getElementById('App')
+        )
+      }
+    }
+    
+  )
   return (
-    <div className="App">
-      <Prompt list={players} finish={setSurvey} fn={update}/>
+    <div id="App">   
     </div>
   );
 }
