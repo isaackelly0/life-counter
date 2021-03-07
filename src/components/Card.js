@@ -1,6 +1,7 @@
 import Counter from "./Counter";
 import Command from "./Command";
 import uniqid from "uniqid";
+import './Card.css';
 const Card = (props) => {
     return(
         <div className="col-md-6 col-lg-4">
