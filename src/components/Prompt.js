@@ -18,7 +18,7 @@ const Prompt = (props) => {
                 <input type="text" onChange={e=>setText(e.target.value)} value={text}></input>
                 <button className="btn btn-primary"type="submit">Add Player</button>
             </form>
-            <button className="btn btn-primary col-1" onClick={()=>{props.finish(false)}}>Finish</button>
+            <button className="btn btn-primary col-6" onClick={()=>{props.finish(false)}}>Finish</button>
         </div>
     )
 }
