@@ -1,0 +1,14 @@
+form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    width: 100%;
+}
+.addPlayer{
+    width: 50%;
+}
+h3{
+    background-color: #198754;
+    color: #fff;
+    width: 100%;
+}

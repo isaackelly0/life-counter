@@ -1,5 +1,6 @@
 import {useState} from "react";
 import uniqid from "uniqid";
+import './Prompt.css';
 
 const Prompt = (props) => {
     const [text, setText] = useState(" ")
@@ -11,14 +12,14 @@ const Prompt = (props) => {
     return(
         <div className="row">
             <h3>Enter names one at a time in the text box below, be careful not to use the same name twice!</h3>
-            <ul>
+            <ul className="col-md-6">
                 {props.list.map(player=>{return(<li key={uniqid()}>{player}</li>)})}    
             </ul>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <input type="text" onChange={e=>setText(e.target.value)} value={text}></input>
-                <button className="btn btn-primary"type="submit">Add Player</button>
+            <form className="col-md-6 col-sm-12" autoComplete="off" onSubmit={handleSubmit}>
+                <input className="addPlayer"type="text" onChange={e=>setText(e.target.value)} value={text}></input>
+                <button className="btn btn-success addPlayer"type="submit">Add Player</button>
             </form>
-            <button className="btn btn-primary col-6" onClick={()=>{props.finish(false)}}>Finish</button>
+            <button className="btn offset-md-4 btn-success btn-lg col-md-4" onClick={()=>{props.finish(false)}}>Finish</button>
         </div>
     )
 }
