@@ -10,8 +10,8 @@ const Prompt = (props) => {
         setText('');
     }
     return(
-        <div className="row">
-            <h3>Enter names one at a time in the text box below, be careful not to use the same name twice!</h3>
+        <div className="row prompt">
+            <h3 className="banner">Enter names one at a time in the text box below, be careful not to use the same name twice!</h3>
             <ul className="col-md-6">
                 {props.list.map(player=>{return(<li key={uniqid()}>{player}</li>)})}    
             </ul>

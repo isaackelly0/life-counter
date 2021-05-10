@@ -1,26 +1,30 @@
+.column{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}
 .btn{
     padding: 0.25em 1.5em;
 }
 .box{
-    /* background-color: black; */
     background-image: linear-gradient(to top right, black, grey);
-    /* border-style: solid; */
-    /* border-width: 50px; */
-    /* border-image: linear-gradient(to left, black, grey); */
     border-radius: 2%;
     color: ghostwhite;
-    padding: 2em 0;
+    padding: 0.25% 0;
 }
 .box-wrapper{
     background-image: linear-gradient(to top right, rgb(24, 18, 18), silver);
     padding: 0.55em;
-    /* margin: 0.5%; */
-
+    margin: 0% 1.5%;
     border-radius: 2.5%;
 }
 .line {
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+h5{
+    padding: 0 1%;
 }
 h4{
     justify-self: center;

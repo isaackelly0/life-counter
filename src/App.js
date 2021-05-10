@@ -30,7 +30,7 @@ const App = () => {
     
   )
   return (
-    <div id="App" className="container">   
+    <div id="App" className="container overflow-hidden">   
     </div>
   );
 }
